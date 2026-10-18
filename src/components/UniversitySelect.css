@@ -1,0 +1,235 @@
+.uni-select {
+  position: relative;
+  font-weight: 400;
+}
+
+.uni-select--disabled {
+  opacity: 0.6;
+}
+
+/* ---------- Trigger ---------- */
+
+.uni-select__control {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  padding-right: 10px;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.uni-select__control:hover {
+  border-color: #cfcabf;
+}
+
+.uni-select__control--open,
+.uni-select__control:focus-within {
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(22, 48, 92, 0.1);
+  background: var(--color-white);
+}
+
+.uni-select__trigger {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 6px 11px 14px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+}
+
+.uni-select__trigger:focus-visible {
+  outline: none;
+}
+
+.uni-select__trigger:disabled {
+  cursor: not-allowed;
+}
+
+.uni-select__icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-navy);
+}
+
+.uni-select__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.uni-select__value {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.uni-select__value--placeholder {
+  color: #9aa1ad;
+}
+
+.uni-select__clear {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s var(--ease), color 0.15s var(--ease);
+}
+
+.uni-select__clear:hover {
+  background: var(--color-bg-soft);
+  color: var(--color-navy);
+}
+
+.uni-select__chevron {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transition: transform 0.2s var(--ease);
+}
+
+.uni-select__chevron svg {
+  width: 100%;
+  height: 100%;
+}
+
+.uni-select__chevron--open {
+  transform: rotate(180deg);
+}
+
+/* ---------- Panel ----------
+   Rendered in normal flow (not absolutely positioned) so the modal's
+   scroll container never clips it. */
+
+.uni-select__panel {
+  margin-top: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: 0 14px 30px rgba(15, 35, 71, 0.12);
+  overflow: hidden;
+  animation: uni-select-pop 0.14s var(--ease);
+}
+
+@keyframes uni-select-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.uni-select__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.uni-select__search svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.uni-select__search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: none;
+  padding: 12px 0;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.uni-select__search input:focus-visible {
+  outline: none;
+}
+
+.uni-select__search input::placeholder {
+  color: #9aa1ad;
+}
+
+.uni-select__list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  max-height: 210px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.uni-select__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.uni-select__option--active {
+  background: var(--color-soft-blue);
+}
+
+.uni-select__option--selected {
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.uni-select__option--other {
+  margin-top: 4px;
+  border-top: 1px dashed var(--color-border);
+  border-radius: 0 0 8px 8px;
+  padding-top: 12px;
+  color: var(--color-text-muted);
+}
+
+.uni-select__check {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--color-navy);
+}
+
+.uni-select__check svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .uni-select__list {
+    max-height: 180px;
+  }
+}

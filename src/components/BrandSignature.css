@@ -1,0 +1,39 @@
+.signature {
+  text-align: center;
+  padding: 90px 24px;
+}
+
+.signature__script {
+  font-family: var(--font-script);
+  font-size: 2.4rem;
+  color: var(--color-navy);
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.signature__script::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 2px;
+  background: var(--color-navy);
+  margin: 4px auto 0;
+  opacity: 0.6;
+}
+
+.signature__tagline {
+  margin-top: 20px;
+  font-style: italic;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .signature {
+    padding: 60px 24px;
+  }
+
+  .signature__script {
+    font-size: 2rem;
+  }
+}

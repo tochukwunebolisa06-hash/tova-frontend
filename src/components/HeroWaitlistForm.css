@@ -1,0 +1,111 @@
+.hero-waitlist-wrap {
+  max-width: 460px;
+}
+
+.hero-waitlist {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  padding: 6px 6px 6px 18px;
+  box-shadow: 0 12px 30px rgba(22, 48, 92, 0.08);
+}
+
+.hero-waitlist__icon {
+  color: var(--color-text-muted);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.hero-waitlist input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: none;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  padding: 10px 0;
+}
+
+.hero-waitlist input::placeholder {
+  color: #9aa1ad;
+}
+
+.hero-waitlist__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease);
+}
+
+.hero-waitlist__submit:hover {
+  transform: translateY(-1px);
+}
+
+.hero-waitlist__submit:disabled {
+  opacity: 0.7;
+  cursor: default;
+  transform: none;
+}
+
+.hero-waitlist__error {
+  color: #b3261e;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.hero-waitlist--success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  padding: 14px 22px;
+  box-shadow: 0 12px 30px rgba(22, 48, 92, 0.08);
+  color: var(--color-navy);
+  font-weight: 600;
+  font-size: 0.95rem;
+  max-width: 460px;
+}
+
+.hero-waitlist__success-icon {
+  width: 20px;
+  height: 20px;
+  color: #1a8f5f;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .hero-waitlist {
+    flex-wrap: wrap;
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+  }
+
+  .hero-waitlist input {
+    width: 100%;
+    order: 1;
+  }
+
+  .hero-waitlist__icon {
+    order: 0;
+  }
+
+  .hero-waitlist__submit {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+}

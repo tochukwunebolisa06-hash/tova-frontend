@@ -1,0 +1,46 @@
+.contact-toggle {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  margin-bottom: 12px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+.contact-toggle--soft {
+  background: var(--color-bg-soft);
+}
+
+.contact-toggle__option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.contact-toggle__option svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.contact-toggle__option:hover {
+  color: var(--color-navy);
+}
+
+.contact-toggle__option--active,
+.contact-toggle__option--active:hover {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.contact-toggle__option:disabled {
+  cursor: default;
+  opacity: 0.7;
+}

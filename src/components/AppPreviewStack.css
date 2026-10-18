@@ -1,0 +1,16 @@
+.app-preview-stack {
+  width: 380px;
+  max-width: 100%;
+}
+
+.app-preview-stack img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  .app-preview-stack {
+    display: none;
+  }
+}

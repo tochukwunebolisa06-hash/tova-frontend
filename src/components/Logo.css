@@ -1,0 +1,12 @@
+.logo {
+  display: block;
+  width: auto;
+}
+
+.logo--md {
+  height: 32px;
+}
+
+.logo--lg {
+  height: 40px;
+}

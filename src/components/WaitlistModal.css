@@ -1,0 +1,122 @@
+.waitlist-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 35, 71, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+  animation: waitlist-fade 0.15s var(--ease);
+}
+
+@keyframes waitlist-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.waitlist-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 36px 32px 32px;
+  box-shadow: 0 30px 60px rgba(15, 35, 71, 0.3);
+}
+
+.waitlist-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waitlist-modal__close:hover {
+  background: var(--color-bg-soft);
+  color: var(--color-navy);
+}
+
+.waitlist-modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.waitlist-modal__subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.waitlist-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.waitlist-modal__field input {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-text);
+  padding: 11px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.waitlist-modal__field input:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 1px;
+}
+
+.waitlist-modal__hint {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.waitlist-modal__error {
+  color: #b3261e;
+  font-size: 0.85rem;
+  margin: -6px 0 16px;
+}
+
+.waitlist-modal__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.waitlist-modal__submit:disabled {
+  opacity: 0.7;
+  cursor: default;
+  transform: none;
+}
+
+.waitlist-modal__success p {
+  color: var(--color-text-muted);
+  margin: 10px 0 26px;
+}
+
+.waitlist-modal__counter {
+  display: flex;
+  justify-content: center;
+  margin: 2px 0 16px;
+}
